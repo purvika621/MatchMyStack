@@ -52,12 +52,13 @@ export async function apiUpload(path: string, form: FormData, opts: RequestInit 
 
 /* ---------- New OTP helpers ---------- */
 
+/* ---------- New OTP helpers ---------- */
+
 /**
- * Request OTP to be sent to `email`. Server should return success message.
- * Example server endpoint: POST /auth/request_otp { email }
+ * Request OTP to be sent to `email`. Server: POST /auth/request-otp { email }
  */
 export async function requestSignupOtp(email: string) {
-  return apiFetch("/auth/request_otp", {
+  return apiFetch("/auth/request-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),
@@ -65,13 +66,13 @@ export async function requestSignupOtp(email: string) {
 }
 
 /**
- * Verify OTP for signup. Server should return success boolean or token that allows signup.
- * Example server endpoint: POST /auth/verify_otp { email, otp }
+ * Verify OTP for signup. Server: POST /auth/verify-otp { email, otp }
  */
 export async function verifySignupOtp(email: string, otp: string) {
-  return apiFetch("/auth/verify_otp", {
+  return apiFetch("/auth/verify-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, otp }),
   });
 }
+
