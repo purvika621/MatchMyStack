@@ -1,5 +1,7 @@
 // client/utils/api.ts
 export const API_BASE = import.meta.env.VITE_API_BASE ?? "";
+console.log("✅ API_BASE =", API_BASE);
+
 
 function getAuthHeader(): Record<string,string> {
   const token = localStorage.getItem("mms_token");
