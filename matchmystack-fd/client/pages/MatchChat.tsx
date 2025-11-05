@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Paperclip, Send, Loader2 } from "lucide-react";
 import { apiFetch } from "@/utils/api";
 
+
 interface Icebreaker {
   id: number;
   category: string;
