@@ -49,7 +49,7 @@ export default function MatchChat() {
   const lastMessageCountRef = useRef(0);
   const userScrolledUpRef = useRef(false);
 
-  const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
+  const API_BASE = import.meta.env.VITE_API_BASE || "https://matchmystacktesting-1.onrender.com";
 
   // Load room and messages
   useEffect(() => {

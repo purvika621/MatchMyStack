@@ -65,7 +65,7 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
   const currentRoomIdRef = useRef<number | null>(null); // ✅ Track current room
   const loadingMessagesRef = useRef(false); // ✅ Prevent duplicate loads
 
-  const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
+  const API_BASE = import.meta.env.VITE_API_BASE || "hhttps://matchmystacktesting-1.onrender.com";
   const WS_BASE = API_BASE.replace("http", "ws");
 
   // Load all chat rooms

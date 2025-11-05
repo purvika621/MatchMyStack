@@ -165,7 +165,7 @@ export default function Projects() {
       }
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_BASE ?? "http://localhost:8000"}/chat/rooms`,
+        `${import.meta.env.VITE_API_BASE ?? "https://matchmystacktesting-1.onrender.com"}/chat/rooms`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
